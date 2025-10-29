@@ -25,7 +25,7 @@ public class PolynomialConstantFinder {
                 String value = entry.getString("value");
 
                 // Decode the value from its base
-                double decoded = Integer.parseInt(value, base);
+                java.math.BigInteger decoded = new java.math.BigInteger(value, base);
                 decodedValues.add(decoded);
             }
 
